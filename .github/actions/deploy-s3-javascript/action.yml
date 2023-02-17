@@ -2,8 +2,9 @@ name: 'Deploy to AWS S3'
 description: 'Deploy a static website via AWS S3'
 inputs: 
   bucket: 
-    description: ;'The s3 bucket name. mann-gha-custom-action-hosting'
+    description: ;'The s3 bucket name.'
     required: true
+    default: mann-gha-custom-action-hosting
   bucket-region: 
     description: 'The region of the s3 buckets.'
     required: false
@@ -11,6 +12,7 @@ inputs:
   dist-folder:
     description: 'The folder container the deployable files.'
     required: true
+    default: ./dist
 runs: 
   using: 'node16'
   main: 'main.js'
